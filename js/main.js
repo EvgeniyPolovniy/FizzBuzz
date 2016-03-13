@@ -15,10 +15,10 @@ window.onload = function () {
     end: 100
   };
 
-  function test() {
+  function makeItems() {
     for ( var i = option.start; i <= option.end; i++) {
       var color = "";
-      var test = "";
+      var string = "";
       function numberFormating(i) {
         var num = i.toString();
         while ( num.length < option.end.toString().length ) {
@@ -27,21 +27,21 @@ window.onload = function () {
         return num;
       }
       if (i % option.one == 0) {
-        test += option.nameOne;
+        string += option.nameOne;
         color = option.colorOne;
       }
       if (i % option.two == 0) {
-        test += option.nameTwo;
+        string += option.nameTwo;
         color = option.colorTwo;
       }
       if ( i % option.two == 0 && i % option.one == 0 ) {
         color = option.colorOneTwo;
       }
 
-      $(".list").append("<li style='background: "+ (color || option.colorNum) +"'><span class='number' style='background: "+option.colorItemNum+"'>"+numberFormating(i)+"</span><span>"+(test || i)+"</span></li>");
+      $(".list").append("<li style='background: "+ (color || option.colorNum) +"'><span class='number' style='background: "+option.colorItemNum+"'>"+numberFormating(i)+"</span><span>"+(string || i)+"</span></li>");
     }
   }
 
   $(".title").text('FizzBuss, more than necessary. For number '+option.one+' and '+option.two);
-  test();
+  makeItems();
 }
