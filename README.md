@@ -1,7 +1,7 @@
 # FizzBuss, more than necessary
 
-![](1.jpg)
+![](1.png)
 
 # Code
 
-![](2.jpg)
+![](2.png)
