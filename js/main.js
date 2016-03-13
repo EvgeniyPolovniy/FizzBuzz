@@ -10,7 +10,7 @@ window.onload = function () {
     colorOneTwo: '#004581',
     colorItemNum: '#001b48',
     nameOne: 'Fizz',
-    nameTwo: 'Buss',
+    nameTwo: 'Buzz',
     start: 1,
     end: 100
   };
@@ -42,6 +42,6 @@ window.onload = function () {
     }
   }
 
-  $(".title").text('FizzBuss, more than necessary. For number '+option.one+' and '+option.two);
+  $(".title").text('FizzBuzz, more than necessary. For number '+option.one+' and '+option.two);
   makeItems();
 }
